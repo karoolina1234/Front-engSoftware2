@@ -1,0 +1,26 @@
+.col-md-6{
+    display: inline-block;
+}
+img{
+    width: 300px;
+}
+.addItemCart{
+    color: #FFF;
+    border:none;
+    background-color: #343a40;
+    width: 80%;
+    height: 40px;
+    border-radius: 9px;
+
+}
+.itens{
+    display: flex;
+}
+.text-center.card-body a{
+    color: #343a40!important;
+}
+.btn.btn-primary{
+    background-color: #343a40;
+    border-color: #343a40;
+    color: #FFF!important;
+}

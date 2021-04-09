@@ -1,0 +1,43 @@
+.nav-link a{
+    color: #FFF!important;
+}
+.footer{
+    padding: 14px 21px;
+    background-color: #343a40;
+    text-align: center;
+    
+}
+.footer ul li{
+    display: block;
+}
+.infos-footer, .infos-redesSociais{
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+    color: #FFF!important;
+}
+.infos-logo{
+    display: inline-block;
+    width: 5%;
+}
+.icon-footer{
+    font-size: 30px;
+    color: #FFF;
+}
+.icon-redes{
+    font-size: 15px; 
+    margin-right: 5px;
+    width: 15px;
+    min-width: 15px;
+    max-width: 15px;
+}
+.icon-redes path{
+    width: 15px;
+    min-width: 15px;
+    max-width: 15px;
+}
+.descProd{
+    text-align: center;
+    font-size: 21px;
+    margin: 29px 0px;
+}

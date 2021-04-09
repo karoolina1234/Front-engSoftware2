@@ -1,0 +1,47 @@
+.sidebar-sticky{
+    background-color: #343a40;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+ 
+}
+.col-md-2 {
+    padding: 0.5px 0px!important;
+    display: inline-block;
+}
+.sidebar-sticky li a{
+    color:#FFFF;
+    font-size: 23px;
+}
+.sidebar-sticky li a svg{
+    margin-right: 3px;
+}
+.sidebar-sticky li{
+    margin: 5px 0px;
+}
+.nav.flex-column{
+    flex-direction: column!important;
+}
+.col-md-10{
+    display: inline-block;
+    vertical-align: top;
+}
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.dados-cliente{
+    width: 50%;
+    margin: 20px auto;
+    border:3px solid #343a40;
+    border-radius: 30px;
+    padding: 25px;
+}
