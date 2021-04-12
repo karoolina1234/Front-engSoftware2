@@ -12,6 +12,12 @@ import Cadastro from '../src/components/menu/Cadastro'
 import Detalhe from './components/produtos/detalhe';
 import Lista from './components/produtos/Lista';
 import AreaUsuario from './components/menu/AreaUsuario'
+import Administrador from './Admin/index'
+
+//admin
+
+import List from './Admin/ListProducts'
+import AddItem from './Admin/AddItem'
 const handleSubmit = values => alert(JSON.stringify(values))
 const initialValues = {}
 ReactDOM.render(
@@ -19,9 +25,12 @@ ReactDOM.render(
   <Provider store={store}>
   <>
   <BrowserRouter>
+  <Route exact path="/add" component={AddItem}/>
+  <Route exact path="/prod" component={List}/>
   <Route exact path="/lista" component={Lista} />
   <Route exact path="/cart" component={ItensCarrinhoMenu} />
   <Route exact path="/" component={Ecomerce} />
+  <Route exact path="/adm" component={Administrador}/>
   <Route exact path="/cadastro" >
   <Cadastro/>
     {/* <Cadastro  handleSubmit={handleSubmit} initialValues={initialValues}/> */}

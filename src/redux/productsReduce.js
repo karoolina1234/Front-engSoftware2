@@ -21,6 +21,15 @@ export default (state=initialState, action) => {
                 item.qtd = 0;
                 return item;
             });
+        case "ADD_ITEM":
+            return [...state,action.item ]
         default:
             return state;}
+}
+
+export const addItem = (item) =>{
+    return{
+        type : "ADD_ITEM",
+        item
+    }
 }
