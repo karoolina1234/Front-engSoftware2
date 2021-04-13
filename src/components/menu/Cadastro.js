@@ -1,50 +1,36 @@
 import React,{useState} from 'react'
 import './cart.css'
-import {Formik, Form , Field, ErrorMessage} from 'formik'
-import * as yup from 'yup'
 import MenuCarrinho from './menuCarrinho'
 import {addUser} from '../../redux/usuarioReducer'
 import {useDispatch} from 'react-redux'
 
-// const validations = yup.object().shape({
-//     nome:yup.string().required(),
-//     email:yup.string().email().required(),
-//     cep:yup.string().min(8).required(),
-//     cidade:yup.string().required(),
-//     numero:yup.string().required(),
-//     rua:yup.string().required(),
-// })
-//function Cadastro  (handleSubmit, initialValues){
 function Cadastro  (){
-    const [formm, setForm] = useState({nome: '', email:'', cep:'', rua:'' , cidade:'', numero:''})
+    const [formm, setForm] = useState({name: '', email:'', cep:'', rua:'' , cidade:'', numero:''})
     const dispatch = useDispatch()
           function formChange(e){
               setForm({...formm, [e.target.name]: e.target.value})
           }  
           function onSubmit(e){
-    
+                e.preventDefault();
                 dispatch(addUser(formm))
+                setForm({name:'', email:'', cep:'', rua:'', cidade:'', numero:''})
           }
     return(
         <>
         <MenuCarrinho/>
-             {/* <Formik initialValues={initialValues}
-             onSubmit={handleSubmit} validationSchema={validations}>
-                 {({handleChange, handleBlur, handleSubmit, values})=>( 
-                     <Form onsubmit={handleSubmit} className="container cadastroUser">*/}
              <form onSubmit={onSubmit} className="container cadastroUser">
                  <h4 className="text-center mt-2 mb-2">Cadastro de usuario</h4>
                  <div className='form-group'>
                      <label>Informe seu nome:</label>
                      <input
                      type="text"
-                     name="nome"
+                     name="name"
                      id="nome"
                       className="form-control"
                     onChange={formChange}
                     value={formm.name}
                       />
-                      {/* <ErrorMessage className="Form-Error" component="span"  name="nome"/> */}
+            
                  </div>
  
                  <div className='form-group'>
@@ -80,7 +66,6 @@ function Cadastro  (){
                          onChange={formChange}
                          value={formm.rua}
                           />
-                          {/* <ErrorMessage className="Form-Error" component="span"  name="rua"/> */}
                      </div>
                  </div>
                  <div className='col-md-6'>
@@ -92,7 +77,7 @@ function Cadastro  (){
                          onChange={formChange}
                          value={formm.numero}
                          />
-                         {/* <ErrorMessage className="Form-Error" component="span"  name="bairro"/> */}
+                        
                      </div>
                  </div>
                  <div className='col-md-6'>
@@ -103,14 +88,12 @@ function Cadastro  (){
                          id="cidade"
                          onChange={formChange}
                          value={formm.cidade}/>
-                         {/* <ErrorMessage className="Form-Error" component="span"  name="cidade"/> */}
                      </div>
                  </div>
                  <button className='cadastrarBtn' type="submit">Enviar informações</button>
  
              </form>
-             {/* )}
-             </Formik> */}
+           
              </>
     )
 }

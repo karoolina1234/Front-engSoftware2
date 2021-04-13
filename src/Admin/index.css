@@ -41,3 +41,19 @@ input{
     height: 34px;
     border-radius: 11px;
 }
+.produto{
+    position: relative;
+    width: 13rem;
+}
+.produto img{
+    width: 100%!important;
+}
+.remove-item{
+    border: 0px;
+    color: red;
+    background-color: #FFFF;
+    position: absolute;
+    right: 0px;
+    bottom: 6%;
+}
+body{height: 100%;}

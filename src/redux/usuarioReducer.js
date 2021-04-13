@@ -5,16 +5,18 @@ const initialState = [
 ]
 
 export default (state=initialState, action) => {
-    if(action.type === 'ADD_USER'){
-        return[...state, action.usuarios]
+    switch(action.type){
+        case "ADD_USER":
+            return[...state, action.usuario];
+        default:
+            return state;
     }
-    return state;
 }
 
-export const addUser = (usuarios) =>{
+export const addUser = (usuario) =>{
     return{
         type: 'ADD_USER',
-        usuarios
+        usuario
     }
 }
 
