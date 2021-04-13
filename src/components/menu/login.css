@@ -1,0 +1,28 @@
+input{
+    display: block;
+    margin: 15px auto;
+    width: 50%;
+}
+.login-button{
+    border: 0px;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    background-color: #343a40!important;
+    color: #FFF;
+}
+.links{
+    width: 50%;
+    margin:0 auto;
+}
+.links a{
+    color:#343a40;
+}
+.e-senha{
+    float:left;
+    cursor: pointer;
+}
+.cadastro{
+    float: right;
+    cursor: pointer;
+}

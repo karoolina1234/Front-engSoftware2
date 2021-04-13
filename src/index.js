@@ -18,6 +18,7 @@ import Administrador from './Admin/index'
 
 import List from './Admin/ListProducts'
 import AddItem from './Admin/AddItem'
+import Login from './components/menu/Login';
 const handleSubmit = values => alert(JSON.stringify(values))
 const initialValues = {}
 ReactDOM.render(
@@ -29,6 +30,7 @@ ReactDOM.render(
   <Route exact path="/prod" component={List}/>
   <Route exact path="/lista" component={Lista} />
   <Route exact path="/cart" component={ItensCarrinhoMenu} />
+  <Route exact path="/login" component={Login}/>
   <Route exact path="/" component={Ecomerce} />
   <Route exact path="/adm" component={Administrador}/>
   <Route exact path="/cadastro" >
